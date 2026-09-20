@@ -1,5 +1,11 @@
 # @\_linked/sioc
 
+## 1.2.4
+
+### Patch Changes
+
+- [#12](https://github.com/linked-fw/sioc/pull/12) [`1eccdab`](https://github.com/linked-fw/sioc/commit/1eccdab36f82a28b5072af74ac5e9fe77e2719d0) Thanks [@flyon](https://github.com/flyon)! - Declare npm as the package manager for this repo, convert the build scripts off `yarn`, and mark `package-lock.json` as a generated file.
+
 ## 1.2.2
 
 ### Patch Changes

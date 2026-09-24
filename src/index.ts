@@ -1,5 +1,5 @@
 import './types.js';
-import './ontologies/sioc.js';
+import './ontologies/sioc.register.js';
 
 //SHAPES FIRST
 import './shapes/UserAccount.js';

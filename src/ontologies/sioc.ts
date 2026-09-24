@@ -1,7 +1,5 @@
 import { Prefix } from '@_linked/core/utils/Prefix';
 import { createNameSpace } from '@_linked/core/utils/NameSpace';
-import { linkedOntology } from '../package.js';
-import * as _this from './sioc.js';
 
 const dataFile = '../data/sioc.json';
 export var loadData = () => {
@@ -66,4 +64,3 @@ export const sioc = {
   usergroup_of,
 };
 
-linkedOntology(_this, ns, 'sioc', loadData, dataFile);

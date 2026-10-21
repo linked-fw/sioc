@@ -10,7 +10,7 @@ const {
   getPackageShape,
   packageExports,
   packageName,
-} = linkedPackage('@_linked/sioc');
+} = linkedPackage('@_linked/sioc', {mirrors: 'http://rdfs.org/sioc/ns#'});
 
 const linkedComponent = createLinkedComponentFn(
   registerPackageExport,

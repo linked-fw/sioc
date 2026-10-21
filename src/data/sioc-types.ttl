@@ -1,0 +1,313 @@
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sioc:
+    a owl:Ontology .
+
+sioct:
+    a owl:Ontology, owl:Thing ;
+    dcterms:description "Extends the SIOC Core Ontology (Semantically-Interlinked Online Communities) by defining subclasses and subproperties of SIOC terms."@en ;
+    dcterms:title "SIOC Types Ontology Module Namespace"@en ;
+    rdfs:seeAlso <http://rdfs.org/sioc/spec/#sec-modules> ;
+    owl:imports sioc: .
+
+sioct:AddressBook
+    a owl:Class ;
+    rdfs:comment "Describes a collection of personal or organisational addresses."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Address Book"@en ;
+    rdfs:seeAlso foaf:Agent ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:AnnotationSet
+    a owl:Class ;
+    rdfs:comment "Describes a set of annotations, for example, those created by a particular user or related to a particular topic."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Annotation Set"@en ;
+    rdfs:seeAlso <http://www.w3.org/2000/10/annotation-ns#Annotation> ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:Answer
+    a owl:Class ;
+    rdfs:comment "A Post that provides an answer in reply to a Question."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Answer"@en ;
+    rdfs:subClassOf sioc:Post .
+
+sioct:ArgumentativeDiscussion
+    a owl:Class ;
+    rdfs:comment "Describes a discussion area where logical arguments can take place."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Argumentative Discussion"@en ;
+    rdfs:seeAlso <http://purl.org/ibis#Idea> ;
+    rdfs:subClassOf sioc:Forum .
+
+sioct:AudioChannel
+    a owl:Class ;
+    rdfs:comment "Describes a channel for distributing audio or sound files, for example, a podcast."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Audio Channel"@en ;
+    rdfs:seeAlso dcmitype:Sound ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:BestAnswer
+    a owl:Class ;
+    rdfs:comment "A Post that is the best answer to a Question, as chosen by the UserAccount who asked the Question or as voted by a Community of UserAccounts."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Best Answer"@en ;
+    rdfs:subClassOf sioc:Post .
+
+sioct:BlogPost
+    a owl:Class ;
+    rdfs:comment "Describes a post that is specifically made on a weblog."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Blog Post"@en ;
+    rdfs:seeAlso sioct:Weblog ;
+    rdfs:subClassOf sioc:Post .
+
+sioct:BoardPost
+    a owl:Class ;
+    rdfs:comment "Describes a post that is specifically made on a message board."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Board Post"@en ;
+    rdfs:seeAlso sioct:MessageBoard ;
+    rdfs:subClassOf sioc:Post .
+
+sioct:BookmarkFolder
+    a owl:Class ;
+    rdfs:comment "Describes a shared collection of bookmarks."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Bookmark Folder"@en ;
+    rdfs:seeAlso <http://www.w3.org/2002/01/bookmark#Bookmark> ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:Briefcase
+    a owl:Class ;
+    rdfs:comment "Describes a briefcase or file service."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Briefcase"@en ;
+    rdfs:seeAlso foaf:Document ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:Category
+    a owl:Class ;
+    rdfs:comment "Category is used on the object of sioc:topic to indicate that this resource is a category on a site."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Category"@en ;
+    rdfs:subClassOf <http://www.w3.org/2008/05/skos#Concept> .
+
+sioct:ChatChannel
+    a owl:Class ;
+    rdfs:comment "Describes a channel for chat or instant messages, for example, via IRC or IM."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Chat Channel"@en ;
+    rdfs:seeAlso sioct:InstantMessage ;
+    rdfs:subClassOf sioc:Forum .
+
+sioct:Comment
+    a owl:Class ;
+    rdfs:comment "Comment is a subtype of sioc:Post and allows one to explicitly indicate that this SIOC post is a comment.  Note that comments have a narrower scope than sioc:Post and may not apply to all types of community site."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Comment"@en ;
+    rdfs:seeAlso sioct:Forum ;
+    rdfs:subClassOf sioc:Post .
+
+sioct:EventCalendar
+    a owl:Class ;
+    rdfs:comment "Describes a calendar of events."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Event Calendar"@en ;
+    rdfs:seeAlso <http://www.w3.org/2002/12/cal/icaltzd#VEVENT> ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:FavouriteThings
+    a owl:Class ;
+    rdfs:comment "Describes a list or a collection of one's favourite things."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Favourite Things"@en ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:ImageGallery
+    a owl:Class ;
+    rdfs:comment "Describes an image gallery, for example, a photo album."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Image Gallery"@en ;
+    rdfs:seeAlso <http://www.w3.org/2003/12/exif/ns/IFD> ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:InstantMessage
+    a owl:Class ;
+    rdfs:comment "Describes an instant message, e.g. sent via Jabber."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Instant Message"@en ;
+    rdfs:seeAlso sioct:ChatChannel ;
+    rdfs:subClassOf sioc:Post .
+
+sioct:MailMessage
+    a owl:Class ;
+    rdfs:comment "Describes an electronic mail message, e.g. a post sent to a mailing list."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Mail Message"@en ;
+    rdfs:seeAlso sioct:MailingList ;
+    rdfs:subClassOf sioc:Post .
+
+sioct:MailingList
+    a owl:Class ;
+    rdfs:comment "Describes an electronic mailing list."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Mailing List"@en ;
+    rdfs:seeAlso sioct:MailMessage ;
+    rdfs:subClassOf sioc:Forum .
+
+sioct:MessageBoard
+    a owl:Class ;
+    rdfs:comment "Describes a message board, also known as an online bulletin board or discussion forum."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Message Board"@en ;
+    rdfs:seeAlso sioct:BoardPost ;
+    rdfs:subClassOf sioc:Forum .
+
+sioct:Microblog
+    a owl:Class ;
+    rdfs:comment "Describes a microblog, i.e. a blog consisting of short text messages."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Microblog"@en ;
+    rdfs:seeAlso sioct:MicroblogPost ;
+    rdfs:subClassOf sioc:Forum .
+
+sioct:MicroblogPost
+    a owl:Class ;
+    rdfs:comment "Describes a post that is specifically made on a microblog."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Microblog Post"@en ;
+    rdfs:seeAlso sioct:Microblog ;
+    rdfs:subClassOf sioc:Post .
+
+sioct:OfferList
+    a owl:Class ;
+    rdfs:comment "Describes a list of the items someone has available to offer."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Offer List"@en ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:Playlist
+    a owl:Class ;
+    rdfs:comment "Describes a list of media items that have been played or can be played."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Playlist"@en ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:Poll
+    a owl:Class ;
+    rdfs:comment "Describes a posted item that contains a poll or survey content."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Poll"@en ;
+    rdfs:seeAlso sioct:SurveyCollection ;
+    rdfs:subClassOf sioc:Item .
+
+sioct:ProjectDirectory
+    a owl:Class ;
+    rdfs:comment "Describes a project directory."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Project Directory"@en ;
+    rdfs:seeAlso <http://usefulinc.com/ns/doap#Project> ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:Question
+    a owl:Class ;
+    rdfs:comment "A Post that asks a Question."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Question"@en ;
+    rdfs:subClassOf sioc:Post .
+
+sioct:ReadingList
+    a owl:Class ;
+    rdfs:comment "Describes a list of books or other materials that have been read or are suggested for reading."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Reading List"@en ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:ResumeBank
+    a owl:Class ;
+    rdfs:comment "Describes a collection of resumes."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Resume Bank"@en ;
+    rdfs:seeAlso <http://captsolo.net/semweb/resume/cv.rdfs#Resume> ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:ReviewArea
+    a owl:Class ;
+    rdfs:comment "Describes an area where reviews are posted."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Review Area"@en ;
+    rdfs:seeAlso <http://purl.org/stuff/rev#Review>, <http://www.isi.edu/webscripter/communityreview/abstract-review-o#Review> ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:SubscriptionList
+    a owl:Class ;
+    rdfs:comment "Describes a shared set of feed subscriptions."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Subscription List"@en ;
+    rdfs:seeAlso <http://atomowl.org/ontologies/atomrdf#Feed> ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:SurveyCollection
+    a owl:Class ;
+    rdfs:comment "Describes an area where survey data can be collected, e.g. from polls."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Survey Collection"@en ;
+    rdfs:seeAlso sioct:Poll ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:Tag
+    a owl:Class ;
+    rdfs:comment "Tag is used on the object of sioc:topic to indicate that this resource is a tag on a site."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Tag"@en .
+
+sioct:VideoChannel
+    a owl:Class ;
+    rdfs:comment "Describes a channel for distributing videos (moving image) files, for example, a video podcast."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Video Channel"@en ;
+    rdfs:seeAlso dcmitype:MovingImage ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:Weblog
+    a owl:Class ;
+    rdfs:comment "Describes a weblog (blog), i.e. an online journal."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Weblog"@en ;
+    rdfs:seeAlso sioct:BlogPost ;
+    rdfs:subClassOf sioc:Forum .
+
+sioct:Wiki
+    a owl:Class ;
+    rdfs:comment "Describes a wiki space."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Wiki"@en ;
+    rdfs:seeAlso sioct:WikiArticle ;
+    rdfs:subClassOf sioc:Container .
+
+sioct:WikiArticle
+    a owl:Class ;
+    rdfs:comment "Describes a wiki article."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Wiki Article"@en ;
+    rdfs:seeAlso sioct:Wiki ;
+    rdfs:subClassOf sioc:Item .
+
+sioct:WishList
+    a owl:Class ;
+    rdfs:comment "Describes a list of the items someone wishes to get."@en ;
+    rdfs:isDefinedBy sioct: ;
+    rdfs:label "Wish List"@en ;
+    rdfs:subClassOf sioc:Container .
+
+<http://www.w3.org/2008/05/skos#Concept>
+    a owl:Class .

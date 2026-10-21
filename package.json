@@ -23,7 +23,8 @@
   ],
   "scripts": {
     "start": "npm exec linked dev",
-    "build": "linked build"
+    "build": "linked build",
+    "test": "node --test test/*.test.mjs"
   },
   "keywords": [
     "linked",

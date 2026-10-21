@@ -11,7 +11,7 @@
  * From a sibling module the same import is ordinary and survives.
  */
 import * as terms from './sioc.js';
-import {loadData, ns} from './sioc.js';
+import {dataFiles, loadData, ns} from './sioc.js';
 import {linkedOntology} from '../package.js';
 
-linkedOntology(terms, ns, 'sioc', loadData, '../data/sioc.json');
+linkedOntology(terms, ns, 'sioc', loadData, dataFiles);

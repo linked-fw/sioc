@@ -1,5 +1,11 @@
 # @\_linked/sioc
 
+## 1.5.1
+
+### Patch Changes
+
+- [#56](https://github.com/linked-fw/sioc/pull/56) [`9e73d07`](https://github.com/linked-fw/sioc/commit/9e73d0744d7ee4fce6edbf03ec0b162b9ee240cf) Thanks [@flyon](https://github.com/flyon)! - Ships `lib/esm/data/shapes.ttl`; core range raised.
+
 ## 1.5.0
 
 ### Minor Changes

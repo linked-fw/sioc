@@ -1,6 +1,6 @@
 import { Shape } from '@_linked/core/shapes/Shape';
 import { linkedShape } from '../package.js';
-import { sioc } from '../ontologies/sioc.js';
+import * as sioc from '../ontologies/sioc.js';
 import { UserAccount } from './UserAccount.js';
 import { objectProperty } from '@_linked/core/shapes/SHACL';
 

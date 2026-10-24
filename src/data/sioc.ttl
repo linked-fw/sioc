@@ -1,3 +1,7 @@
+# SIOC Core Ontology, as published at http://rdfs.org/sioc/ns (RDF/XML, owl:versionInfo
+# "Revision: 1.36", Last-Modified 2020-06-05), converted to Turtle; the triples are
+# unchanged. Refresh: see README §The data.
+
 @prefix sioc: <http://rdfs.org/sioc/ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .

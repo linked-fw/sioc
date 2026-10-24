@@ -1,7 +1,7 @@
 import { Shape } from '@_linked/core/shapes/Shape';
 import { objectProperty } from '@_linked/core/shapes/SHACL';
 import { linkedShape, packageName } from '../package.js';
-import { sioc } from '../ontologies/sioc.js';
+import * as sioc from '../ontologies/sioc.js';
 // Space, Usergroup and UserAccount reference each other, so they name each other
 // by [package, name] (a class reference would read a binding that is not yet
 // initialised when the cycle is entered from the other side) and import each

@@ -2,7 +2,7 @@ import type { NodeReferenceValue } from '@_linked/core/utils/NodeReference';
 import { literalProperty, objectProperty } from '@_linked/core/shapes/SHACL';
 import { Shape } from '@_linked/core/shapes/Shape';
 import { linkedShape, packageName } from '../package.js';
-import { sioc } from '../ontologies/sioc.js';
+import * as sioc from '../ontologies/sioc.js';
 import { Person as SchemaPerson } from '@_linked/schema/shapes/Person';
 import type { Usergroup } from './Usergroup.js';
 import type { Space } from './Space.js';

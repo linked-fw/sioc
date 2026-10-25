@@ -74,3 +74,7 @@ Renamed from `lincd-sioc` to `@_linked/sioc` and migrated out of the
 publishing infrastructure were updated to match the modern `@_linked/*`
 convention (changesets, dual-package ESM+CJS build, `development`
 conditional export for Vite HMR).
+
+## Data license
+
+The package code is MIT licensed (see `LICENSE`). The bundled ontology data is the SIOC Core Ontology and SIOC Types module, (c) 2004-2018 Data Science Institute (formerly DERI), NUI Galway, and is not covered by the MIT license. The namespace documents carry no license; the SIOC specification's Creative Commons license (CC BY 1.0) states that it does not apply to SIOC ontology terms. See `NOTICE`.

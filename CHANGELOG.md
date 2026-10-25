@@ -1,5 +1,11 @@
 # @\_linked/sioc
 
+## 1.6.1
+
+### Patch Changes
+
+- [#60](https://github.com/linked-fw/sioc/pull/60) [`d8c18a4`](https://github.com/linked-fw/sioc/commit/d8c18a41cd2bd4f1aec750932f878e08f3a6f276) Thanks [@flyon](https://github.com/flyon)! - License: MIT (data under its original license)
+
 ## 1.6.0
 
 ### Minor Changes

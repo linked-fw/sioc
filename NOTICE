@@ -1,0 +1,13 @@
+@_linked/sioc
+
+The code in this package is licensed under the MIT License (see LICENSE).
+
+The MIT License does not cover the bundled ontology data. That data is the SIOC Core Ontology
+(http://rdfs.org/sioc/ns) and the SIOC Types module (http://rdfs.org/sioc/types), as published at
+their namespaces. Copyright (c) 2004-2018 by Data Science Institute (formerly DERI), NUI Galway.
+
+The namespace documents carry no license of their own. The SIOC Core Ontology Specification
+(http://rdfs.org/sioc/spec/) is licensed under Creative Commons Attribution 1.0
+(https://creativecommons.org/licenses/by/1.0/) and states: "This copyright applies to the SIOC
+Core Ontology Specification and accompanying documentation and does not apply to SIOC data
+formats, ontology terms, or technology."

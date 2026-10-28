@@ -1,5 +1,11 @@
 # @\_linked/sioc
 
+## 1.6.2
+
+### Patch Changes
+
+- [#65](https://github.com/linked-fw/sioc/pull/65) [`83c69db`](https://github.com/linked-fw/sioc/commit/83c69db9d055391f411d7a133ef3efec64cde5c5) Thanks [@flyon](https://github.com/flyon)! - `package.json` says what this package is in `"linked": {"kind": "ontology"}` instead of `"linkedPackage": true`, which the CLI and server no longer read.
+
 ## 1.6.1
 
 ### Patch Changes

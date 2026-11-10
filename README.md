@@ -71,8 +71,7 @@ console.log(account.accountOf?.givenName);
 ## History
 
 Renamed from `lincd-sioc` to `@_linked/sioc` and migrated out of the
-[lincd.org](https://github.com/lincd-org) umbrella in
-[create-now plan-011](https://github.com/Semantu/create-now/blob/main/docs/reports/)
+[lincd.org](https://github.com/lincd-org) umbrella
 (2026-06-12). At the time, the internal source was unchanged — only the package name and
 publishing infrastructure were updated to match the modern `@_linked/*`
 convention (changesets, dual-package ESM+CJS build, `development`

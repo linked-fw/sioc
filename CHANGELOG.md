@@ -131,7 +131,7 @@
   The declared range was wide enough that the resolved core depended on whatever the
   consumer — or this repo's own CI, via `package-lock.json` — happened to install. Core
   decides how a shape's IRI is minted, so a stale core made this package emit legacy
-  `data.lincd.org` IRIs instead of the arch-02 `linked.cm` scheme. Which IRIs a published
+  `data.lincd.org` IRIs instead of the public `linked.cm` scheme. Which IRIs a published
   package produces should not be a function of the installer's dependency tree.
 
   Minor rather than patch: this raises the minimum core a consumer must resolve, so it
@@ -266,8 +266,6 @@
     narrowing would lose that — but since the body unconditionally throws,
     no real call site exercises this.
 
-  Context: see create-now plan-011 report (docs/reports/009-legacy-lincd-eradication.md).
-
 ## 1.0.4
 
 ### Patch Changes
@@ -275,7 +273,5 @@
 - Renamed from `lincd-sioc` to `@_linked/sioc` and migrated out of the
   lincd.org umbrella to its own package + git repo. Internal source
   unchanged (already used `@_linked/core` and `@_linked/schema`); only
-  package name + tooling structure updated. CN + `@_linked/auth`
-  consumers updated to import from `@_linked/sioc/...`. See create-now
-  plan-011 §"Phase 4 — Rename lincd-sioc → @\_linked/sioc" for
-  motivation and full migration breakdown.
+  package name + tooling structure updated. The host app and `@_linked/auth`
+  consumers updated to import from `@_linked/sioc/...`.

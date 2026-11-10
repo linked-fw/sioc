@@ -21,8 +21,10 @@ import * as sioc from '@_linked/sioc/ontologies/sioc';
 static targetClass = sioc.UserAccount;
 ```
 
-`ontologies/sioc` has one named export per term of `http://rdfs.org/sioc/ns#` (99);
-`ontologies/sioc.data` holds `ns`, `dataFiles`, `_ontologyResource` and `loadData()`. A term's
+`ontologies/sioc` has one named export per term of `http://rdfs.org/sioc/ns#` (99), each an `{id}`
+with the term's full IRI. `ontologies/index` registers the ontology with its data and suggested prefix; the package entry and
+`shapes/index` import it. The package registers no prefix: an app lists the prefixes it uses in
+its own prefix map. Where code needs a namespace function, core's `createNameSpace('http://rdfs.org/sioc/ns#')` gives one. A term's
 export name is its local name (`sioc:account_of` → `sioc.account_of`). `linked generate-ontology`
 writes the modules from the data (`package.json` `"linkedOntologies"`), and `linked build` fails
 when they are stale; never edit them by hand.

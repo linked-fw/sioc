@@ -11,7 +11,7 @@ import { readFileSync } from 'node:fs';
 import { describe, it } from 'node:test';
 import { checkShapeHierarchy } from '@_linked/core/shapes/checkShapeHierarchy';
 import '../lib/esm/shapes/index.js';
-import '../lib/esm/ontologies/sioc.register.js';
+import '../lib/esm/ontologies/index.js';
 import { packageName } from '../lib/esm/package.js';
 
 const manifest = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));

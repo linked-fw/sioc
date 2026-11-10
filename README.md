@@ -54,7 +54,8 @@ in one extra file per prefix, `src/data/<prefix>-added.ttl`, listed in `"linkedO
 New classes or properties never go there; a term a standard lacks belongs in the consumer's own
 ontology package.
 
-Both files carry their own ontology header, so this package has no `-added` file.
+Both files carry their own ontology header but no suggested prefix, so `src/data/sioc-added.ttl`
+adds `vann:preferredNamespacePrefix "sioc"` and `vann:preferredNamespaceUri` to `sioc:`.
 
 ## Usage
 

@@ -20,7 +20,8 @@
       "namespace": "http://rdfs.org/sioc/ns#",
       "data": [
         "sioc.ttl",
-        "sioc-types.ttl"
+        "sioc-types.ttl",
+        "sioc-added.ttl"
       ]
     }
   },

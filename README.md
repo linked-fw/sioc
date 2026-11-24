@@ -21,8 +21,10 @@ import * as sioc from '@_linked/sioc/ontologies/sioc';
 static targetClass = sioc.UserAccount;
 ```
 
-`ontologies/sioc` has one named export per term of `http://rdfs.org/sioc/ns#` (99);
-`ontologies/sioc.data` holds `ns`, `dataFiles`, `_ontologyResource` and `loadData()`. A term's
+`ontologies/sioc` has one named export per term of `http://rdfs.org/sioc/ns#` (99), each an `{id}`
+with the term's full IRI. `ontologies/index` registers the ontology with its data and suggested prefix; the package entry and
+`shapes/index` import it. The package registers no prefix: an app lists the prefixes it uses in
+its own prefix map. Where code needs a namespace function, core's `createNameSpace('http://rdfs.org/sioc/ns#')` gives one. A term's
 export name is its local name (`sioc:account_of` → `sioc.account_of`). `linked generate-ontology`
 writes the modules from the data (`package.json` `"linkedOntologies"`), and `linked build` fails
 when they are stale; never edit them by hand.
@@ -54,7 +56,8 @@ in one extra file per prefix, `src/data/<prefix>-added.ttl`, listed in `"linkedO
 New classes or properties never go there; a term a standard lacks belongs in the consumer's own
 ontology package.
 
-Both files carry their own ontology header, so this package has no `-added` file.
+Both files carry their own ontology header but no suggested prefix, so `src/data/sioc-added.ttl`
+adds `vann:preferredNamespacePrefix "sioc"` and `vann:preferredNamespaceUri` to `sioc:`.
 
 ## Usage
 
@@ -68,8 +71,7 @@ console.log(account.accountOf?.givenName);
 ## History
 
 Renamed from `lincd-sioc` to `@_linked/sioc` and migrated out of the
-[lincd.org](https://github.com/lincd-org) umbrella in
-[create-now plan-011](https://github.com/Semantu/create-now/blob/main/docs/reports/)
+[lincd.org](https://github.com/lincd-org) umbrella
 (2026-06-12). At the time, the internal source was unchanged — only the package name and
 publishing infrastructure were updated to match the modern `@_linked/*`
 convention (changesets, dual-package ESM+CJS build, `development`

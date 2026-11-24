@@ -20,7 +20,8 @@
       "namespace": "http://rdfs.org/sioc/ns#",
       "data": [
         "sioc.ttl",
-        "sioc-types.ttl"
+        "sioc-types.ttl",
+        "sioc-added.ttl"
       ]
     }
   },
@@ -71,11 +72,11 @@
     }
   },
   "dependencies": {
-    "@_linked/core": "^2.41.0",
-    "@_linked/dcmi": "^1.6.0",
-    "@_linked/react": "^2.0.0",
-    "@_linked/schema": "^1.8.0",
-    "@_linked/xsd": "^1.4.0"
+    "@_linked/core": "^3.0.0",
+    "@_linked/dcmi": "^2.0.0",
+    "@_linked/react": "^3.0.0",
+    "@_linked/schema": "^2.0.0",
+    "@_linked/xsd": "^2.0.0"
   },
   "peerDependencies": {
     "react": "^18.2.0 || ^19.0.0"

@@ -1,5 +1,15 @@
 # @\_linked/sioc
 
+## 2.0.0
+
+### Major Changes
+
+- [#70](https://github.com/linked-fw/sioc/pull/70) [`e78c735`](https://github.com/linked-fw/sioc/commit/e78c735b1bad8c6d9ef4c6634d09bbbec66d56f8) Thanks [@flyon](https://github.com/flyon)! - Ontology modules in the one-index layout, and no prefix registered. `ontologies/sioc` holds only the terms, each an `{id}` with its full IRI. `ontologies/index` registers every ontology of the package with core's `registerOntologies` (data and suggested prefix); the package entry and `shapes/index` import it. Removed: the `ontologies/<name>.data` and `ontologies/<name>.register` modules (`ns`, `dataFiles`, `loadData`, `_ontologyResource`) and `linkedOntology` from `package` (now `registerOntologies`). The package no longer adds a prefix: an app lists the prefixes it uses in its own prefix map. For a namespace function use `createNameSpace(namespace)` from `@_linked/core/utils/NameSpace`; for the data, the registration from `getRegisteredOntologies()`. Namespaces, term names and term IRIs are unchanged. Requires the core release with `registerOntologies`.
+
+### Patch Changes
+
+- [#70](https://github.com/linked-fw/sioc/pull/70) [`14aa2f5`](https://github.com/linked-fw/sioc/commit/14aa2f55d9cfb00a0b596a230fbefd49b5589e11) Thanks [@flyon](https://github.com/flyon)! - The ontology data carries its suggested prefix (sioc) as `vann:preferredNamespacePrefix` and `vann:preferredNamespaceUri` in an added data file, as `linked build` now requires; modules regenerated. Prefixes and terms unchanged.
+
 ## 1.6.2
 
 ### Patch Changes
